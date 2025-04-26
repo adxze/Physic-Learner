@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://buui4m25fu7a4"]
+
+[ext_resource type="Texture2D" uid="uid://duvqi23hoalbb" path="res://skins/Tilemap/pngwing.com.png" id="1_kydl0"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="life" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="hearth" type="TextureRect" parent="life"]
+layout_mode = 0
+offset_right = 26.0
+offset_bottom = 26.0
+texture = ExtResource("1_kydl0")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

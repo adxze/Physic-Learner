@@ -1,0 +1,132 @@
+[gd_scene load_steps=15 format=3 uid="uid://ca7bthohpqhxb"]
+
+[ext_resource type="Script" path="res://moving_enemy.gd" id="1_vvwbi"]
+[ext_resource type="PackedScene" uid="uid://c08ra8o0vsk3i" path="res://hitbox.tscn" id="2_0tba8"]
+[ext_resource type="Texture2D" uid="uid://bn2341l4hg8rs" path="res://skins/Tilemap/tilemap.png" id="2_1m2jb"]
+[ext_resource type="Script" path="res://AnimatedSprite2Dburng.gd" id="3_a4f8l"]
+
+[sub_resource type="Curve2D" id="Curve2D_l3cu6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3, 1, 0, 0, 0, 0, 50, -1, 0, 0, 0, 0, 164, 0, 0, 0, 0, 0, 163, 33, 0, 0, 0, 0, 163, 55, 0, 0, 0, 0, 121, 54, 0, 0, 0, 0, 81, 55, 0, 0, 0, 0, 39, 54, 0, 0, 0, 0, 0, 56, 0, 0, 0, 0, 1, 37, 0, 0, 0, 0, 2, 1)
+}
+point_count = 11
+
+[sub_resource type="GDScript" id="GDScript_21bcf"]
+script/source = "extends Node2D
+
+var move_
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb17h"]
+atlas = ExtResource("2_1m2jb")
+region = Rect2(551, 159, 23, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2aaaq"]
+atlas = ExtResource("2_1m2jb")
+region = Rect2(574, 159, 23, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_olfiy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb17h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2aaaq")
+}],
+"loop": true,
+"name": &"gerak",
+"speed": 15.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1iys2"]
+
+[sub_resource type="Animation" id="Animation_xkg4a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_tieqs"]
+resource_name = "move along path"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_cregm"]
+resource_name = "move along path bounce"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jwdno"]
+_data = {
+"RESET": SubResource("Animation_xkg4a"),
+"move along path": SubResource("Animation_tieqs"),
+"move along path bounce": SubResource("Animation_cregm")
+}
+
+[node name="movingEnemy" type="Path2D"]
+curve = SubResource("Curve2D_l3cu6")
+script = ExtResource("1_vvwbi")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(3, 1)
+rotation = -0.0425275
+rotates = false
+
+[node name="enemy" type="Node2D" parent="PathFollow2D"]
+script = SubResource("GDScript_21bcf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D/enemy"]
+position = Vector2(-0.998542, -0.0539753)
+rotation = 0.0468788
+sprite_frames = SubResource("SpriteFrames_olfiy")
+animation = &"gerak"
+autoplay = "gerak"
+frame_progress = 0.819525
+script = ExtResource("3_a4f8l")
+
+[node name="hitbox" parent="PathFollow2D/enemy" instance=ExtResource("2_0tba8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/enemy/hitbox"]
+position = Vector2(-0.956581, -1.04161)
+rotation = -3.09706
+shape = SubResource("CircleShape2D_1iys2")
+
+[node name="animationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "move along path"
+libraries = {
+"": SubResource("AnimationLibrary_jwdno")
+}

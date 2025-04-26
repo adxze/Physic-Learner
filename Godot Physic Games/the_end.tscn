@@ -1,0 +1,429 @@
+[gd_scene load_steps=24 format=3 uid="uid://ubmy76o8het8"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_jd87i"]
+[ext_resource type="Script" path="res://ParallaxLayerStartCloud.gd" id="2_sux4q"]
+[ext_resource type="Texture2D" uid="uid://b6jcw4okq6n4x" path="res://paralax/layers_fullcolor/sky_fc.png" id="3_fmuhj"]
+[ext_resource type="Texture2D" uid="uid://c7qvjkleiy3h4" path="res://kenney_ui-pack/PNG/green_button02.png" id="3_ng4ic"]
+[ext_resource type="Texture2D" uid="uid://dxivy2jm7jm2r" path="res://paralax/layers_fullcolor/clouds_mid_fc.png" id="4_lk0rw"]
+[ext_resource type="Texture2D" uid="uid://df5b8cyp84srb" path="res://kenney_ui-pack/PNG/red_button01.png" id="4_qtp5y"]
+[ext_resource type="FontFile" uid="uid://byal7a244385p" path="res://kenney_ui-pack/Font/ThaleahFat.ttf" id="5_cas2e"]
+[ext_resource type="AudioStream" uid="uid://cudl66cfbl6r7" path="res://sounds/openScene.wav" id="6_0elih"]
+[ext_resource type="Texture2D" uid="uid://bhglb1nq0wk2d" path="res://paralax/layers_fullcolor/clouds_front_t_fc.png" id="7_23ic6"]
+[ext_resource type="Script" path="res://ParallaxLayer.gd" id="7_ftux0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a3u74"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imkhi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wybcy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_csytt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4dh33"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f1eps"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kksun"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f3c3k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0qyda"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ltwtf"]
+
+[sub_resource type="Animation" id="Animation_kks24"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(60, 202)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(116, 192)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Button:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(30, 121)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Button2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(205, 122)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Button:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c542o"]
+resource_name = "new_animation"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(60, 202), Vector2(83, 18)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RichTextLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(116, 192), Vector2(127, 61)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Button:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-190, 113), Vector2(30, 121)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Button2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(438, 129), Vector2(205, 122)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Button2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Button:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yclfh"]
+_data = {
+"RESET": SubResource("Animation_kks24"),
+"new_animation": SubResource("Animation_c542o")
+}
+
+[node name="the_end" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jd87i")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_left = 30.0
+offset_top = 121.0
+offset_right = 228.0
+offset_bottom = 170.0
+scale = Vector2(0.407765, 0.598827)
+theme_override_colors/font_color = Color(0.901961, 0.901961, 0.901961, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.309804, 0.560784, 0.196078, 1)
+theme_override_colors/icon_hover_color = Color(0.47451, 0.898039, 0.262745, 1)
+theme_override_fonts/font = ExtResource("5_cas2e")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a3u74")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_imkhi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wybcy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_csytt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4dh33")
+toggle_mode = true
+keep_pressed_outside = true
+text = "restart"
+icon = ExtResource("3_ng4ic")
+flat = true
+icon_alignment = 1
+language = "English"
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_left = 205.0
+offset_top = 122.0
+offset_right = 403.0
+offset_bottom = 171.0
+scale = Vector2(0.411527, 0.589314)
+theme_override_colors/font_color = Color(0.901961, 0.901961, 0.901961, 1)
+theme_override_colors/font_pressed_color = Color(0.980392, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.933333, 0.443137, 0.12549, 1)
+theme_override_fonts/font = ExtResource("5_cas2e")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f1eps")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kksun")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_f3c3k")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0qyda")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ltwtf")
+text = "Quit"
+icon = ExtResource("4_qtp5y")
+flat = true
+clip_text = true
+icon_alignment = 1
+language = "English"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(384.001, 2.08165e-12)
+script = ExtResource("2_sux4q")
+
+[node name="CloudsMidFc" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color(0, 0.54902, 0.858824, 1)
+position = Vector2(195, 98.5)
+scale = Vector2(1.02604, 1.14352)
+texture = ExtResource("3_fmuhj")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(384.001, 2.08165e-12)
+script = ExtResource("2_sux4q")
+
+[node name="CloudsMidFc" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(100, 87)
+texture = ExtResource("4_lk0rw")
+
+[node name="CloudsMidFc2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(129, 112)
+texture = ExtResource("4_lk0rw")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 5
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 60.0
+offset_top = 202.0
+offset_right = 239.0
+offset_bottom = 252.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(0.294118, 0.733333, 0.384314, 1)
+theme_override_colors/selection_color = Color(0.396078, 1, 0.396078, 1)
+theme_override_colors/font_shadow_color = Color(0.831373, 0.811765, 0.196078, 1)
+theme_override_fonts/normal_font = ExtResource("5_cas2e")
+theme_override_font_sizes/normal_font_size = 47
+text = "THE end 
+"
+
+[node name="202436" type="VScrollBar" parent="RichTextLabel"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+step = 1.0
+
+[node name="19679" type="VScrollBar" parent="RichTextLabel"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+max_value = 33.0
+step = 1.0
+page = 33.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_0elih")
+volume_db = -24.236
+autoplay = true
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = 0
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2(384.001, 2.08165e-12)
+script = ExtResource("7_ftux0")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(145.856, 71.5361)
+texture = ExtResource("7_23ic6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(122, 80)
+texture = ExtResource("7_23ic6")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(120, 88)
+texture = ExtResource("7_23ic6")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(143, 94)
+texture = ExtResource("7_23ic6")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(79, 100)
+texture = ExtResource("7_23ic6")
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(112, 109)
+texture = ExtResource("7_23ic6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2(110, 402)
+rotation = 3.14159
+texture = ExtResource("7_23ic6")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 116.0
+offset_top = 192.0
+offset_right = 193.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.717232, 0.712512)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.34902)
+theme_override_fonts/font = ExtResource("5_cas2e")
+text = "by : Adig sl"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "new_animation"
+libraries = {
+"": SubResource("AnimationLibrary_yclfh")
+}
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

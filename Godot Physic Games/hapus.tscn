@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxhoq6ntmrksf"]
+
+[ext_resource type="PackedScene" uid="uid://bi5q3jwxoxb8l" path="res://scene/TrueTile.tscn" id="1_826jc"]
+[ext_resource type="PackedScene" uid="uid://drtm0jnyxx0dp" path="res://scene/charachter.tscn" id="2_61f4w"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_826jc")]
+position = Vector2(216.777, 134.605)
+layer_0/tile_data = PackedInt32Array(-131083, 131075, 0, -131082, 131075, 0, -131081, 131075, 0, -131080, 131075, 0, -131079, 131075, 0, -131078, 131075, 0, -131077, 131075, 0, -65541, 131075, 0, -5, 131075, 0, 65532, 131075, 0, 65533, 131075, 0, 65534, 131075, 0, 65535, 131075, 0, 0, 131075, 0, -65536, 131075, 0, -131072, 131075, 0, -196608, 131075, 0, -2, 131075, 0, -1, 131075, 0, -65537, 131075, 0, 65531, 131075, 0, -196607, 131075, 0, -196606, 131075, 0, -196605, 131075, 0, -196604, 131075, 0, -196603, 131075, 0, -196602, 131075, 0, -196601, 131075, 0)
+
+[node name="player" parent="." instance=ExtResource("2_61f4w")]
+position = Vector2(74, 66)
+JUMP_FORCE = null
+JUMP_REALEASE_FORCE = null
+MAX_SPEED = null
+ACCELERATION = null
+FRICTION = null

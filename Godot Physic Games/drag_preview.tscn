@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bca3dhdnh524i"]
+
+[ext_resource type="Script" path="res://dragPreview.gd" id="1_tjecb"]
+
+[node name="dragPreview" type="Sprite2D"]
+script = ExtResource("1_tjecb")
