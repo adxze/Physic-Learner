@@ -1,3 +1,30 @@
+
+## Developer & Contributions
+
+- Adiguna S Ligawan (Game Developer & Designer)  
+  <br>
+
+---
+
+## About
+
+**Physics Platformer** combines fun platforming action with interactive physics education. As players guide a friendly robot through bright pixel-art levels, they encounter obstacles that can only be solved by answering real-world physics questions. Each challenge integrates lessons about momentum, force, and motion directly into gameplay.
+
+---
+
+## Key Features
+
+**Physics-Based Gameplay**: Movement and challenges directly reflect physics principles like momentum, gravity, and force.  
+
+**Interactive Lessons**: Embedded lessons appear at obstacles, reinforcing learning through action.  
+
+**Robot Character**: A friendly companion makes the game accessible to all ages.  
+
+**Progressive Difficulty**: Lessons scale with deeper levels, teaching increasingly complex concepts.  
+
+**Pixel Art Style**: Bright visuals ensure a fun and engaging learning experience.  
+
+
 # Physics Learner
 
 <table>
@@ -195,34 +222,7 @@ classDiagram
     EnemyController --> PlayerController : collides
 ```
 
----
-
-## Developer & Contributions
-
-- Adiguna S Ligawan (Game Developer & Designer)  
-  <br>
-
----
-
-## About
-
-**Physics Platformer** combines fun platforming action with interactive physics education. As players guide a friendly robot through bright pixel-art levels, they encounter obstacles that can only be solved by answering real-world physics questions. Each challenge integrates lessons about momentum, force, and motion directly into gameplay.
-
----
-
-## Key Features
-
-**Physics-Based Gameplay**: Movement and challenges directly reflect physics principles like momentum, gravity, and force.  
-
-**Interactive Lessons**: Embedded lessons appear at obstacles, reinforcing learning through action.  
-
-**Robot Character**: A friendly companion makes the game accessible to all ages.  
-
-**Progressive Difficulty**: Lessons scale with deeper levels, teaching increasingly complex concepts.  
-
-**Pixel Art Style**: Bright visuals ensure a fun and engaging learning experience.  
-
----
+<br>
 
 ## Play The Game
 
